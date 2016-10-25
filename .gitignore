@@ -39,3 +39,5 @@ obj/*
 object/*
 Components/*
 packages/*
+
+*.designer.cs
