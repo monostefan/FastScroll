@@ -178,11 +178,11 @@ namespace FastScroll
 
 			public override void OnScrolled(RecyclerView recyclerView, int dx, int dy)
 			{
-				View firstVisibleView 	= recyclerView.GetChildAt(0);
+				View firstVisibleView = recyclerView.GetChildAt(0);
 				int firstVisiblePosition = recyclerView.GetChildPosition(firstVisibleView);
-				int visibleRange 		= recyclerView.ChildCount;
+				int visibleRange = recyclerView.ChildCount;
 				int lastVisiblePosition = firstVisiblePosition + visibleRange;
-				int itemCount 			= recyclerView.GetAdapter().ItemCount;
+				int itemCount = recyclerView.GetAdapter().ItemCount;
 				int position;
 
 				if(firstVisiblePosition==0)

@@ -35,7 +35,7 @@ namespace FastScroll
 			items = new ObservableCollection<string>(items.OrderBy(a => a));
 
 			recyclerView.SetAdapter(new LargeAdapter(items));
-			recyclerView.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Vertical, false));
+            recyclerView.SetLayoutManager(new GridLayoutManager(this, 2));
 			FastScroller fastScroller = FindViewById<FastScroller>(Resource.Id.fastscroller);
 			fastScroller.SetRecyclerView(recyclerView);
 		}
