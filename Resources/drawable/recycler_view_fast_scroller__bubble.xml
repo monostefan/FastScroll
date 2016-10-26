@@ -6,10 +6,10 @@
     android:topLeftRadius="4dp"
     android:topRightRadius="4dp"
     android:bottomLeftRadius="4dp"
-    android:bottomRightRadius="4dp"/>
+    android:bottomRightRadius="4dp" />
 
-  <solid android:color="#333333"/>
+  <solid android:color="#333333" />
   <size
     android:height="40dp"
-    android:width="40dp"/>
+    android:width="40dp" />
 </shape>

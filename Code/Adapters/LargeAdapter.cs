@@ -9,18 +9,12 @@ namespace FastScroll
 {
 	public class LargeAdapter : BaseRecyclerAdapter
 	{
-		public class MyView : RecyclerView.ViewHolder, View.IOnClickListener
+		public class ViewHolder : RecyclerView.ViewHolder
 		{
-			public TextView Name 		{ get; set; }
+			public TextView Name { get; set; }
 
-			public MyView(View view) : base(view)
+			public ViewHolder(View view) : base(view)
 			{
-				view.SetOnClickListener(this);
-			}
-
-			public void OnClick(View v)
-			{
-				Console.WriteLine("in onclick:" + this.Name.Text);
 			}
 		}
 			
@@ -40,14 +34,15 @@ namespace FastScroll
 			View row = LayoutInflater.From(parent.Context).Inflate(Android.Resource.Layout.SimpleListItem1, parent, false);
 
 			TextView name = row.FindViewById<TextView>(Android.Resource.Id.Text1);
+            //name.SetHeight(250);
 
-			MyView view = new MyView(row){ Name = name };
+			ViewHolder view = new ViewHolder(row){ Name = name };
 			return view;
 		}
 
 		public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
 		{
-			MyView hold = holder as MyView;
+			ViewHolder hold = holder as ViewHolder;
 			hold.Name.Text = items[position];
 		}
 
