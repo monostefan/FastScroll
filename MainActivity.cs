@@ -14,7 +14,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 namespace FastScroll
 {
 	[Activity(Label = "FastScroll", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : ActionBarActivity
+    public class MainActivity : Activity
 	{
 		const int SIZE = 5000;
 
@@ -35,7 +35,7 @@ namespace FastScroll
 			items = new ObservableCollection<string>(items.OrderBy(a => a));
 
 			recyclerView.SetAdapter(new LargeAdapter(items));
-            recyclerView.SetLayoutManager(new GridLayoutManager(this, 2));
+            recyclerView.SetLayoutManager(new GridLayoutManager(this, 3));
 			FastScroller fastScroller = FindViewById<FastScroller>(Resource.Id.fastscroller);
 			fastScroller.SetRecyclerView(recyclerView);
 		}

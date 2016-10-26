@@ -80,7 +80,7 @@
     <AndroidResource Include="Resources\drawable\recycler_view_fast_scroller__handle.xml" />
     <AndroidResource Include="Resources\layout\FastScroller.axml" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Code\" />
     <Folder Include="Code\Adapters\" />
